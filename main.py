@@ -12,6 +12,8 @@ def date_time_(article):
     Форматирует дату и время в удобный для чтения вид
     :param article: статья
     :return: дата/время в формате DD.MM.YYYY HH:MM:SS
+    P.S. В задании указано вывести только дату, но при выводе, дата с указанием времени написания статьи, выглядит лучше
+    Решил сделать так
     '''
     date_time = article.find(class_="tm-article-snippet__datetime-published").time.attrs['datetime']
     date_time = date_time[:-5].split('T')
